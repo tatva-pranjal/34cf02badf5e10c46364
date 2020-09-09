@@ -27,11 +27,13 @@ const FormDemo = (props) => {
         style={style.inputWrapper}
         onChangeText={(text) => onChangeText('email', text)}
         value={email}
+        placeholder="Email"
       />
       <TextInput
-        style={style.inputWrapper}
+        style={style.passwordWrapper}
         onChangeText={(text) => onChangeText('password', text)}
         value={password}
+        placeholder="Password"
       />
       <Button
         style={style.buttonWrapper}
@@ -63,7 +65,7 @@ const style = StyleSheet.create({
   },
   buttonWrapper: {
     width: '80%',
-    marginTop: 20,
+    marginTop: 40,
   },
 });
 

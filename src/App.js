@@ -15,9 +15,9 @@ import RootNavigation from './navigation';
 
 function App() {
   return (
-    <Provider store={store}>android
+    <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <SafeAreaView>
+        <SafeAreaView style={{flex: 1}}>
           <RootNavigation />
         </SafeAreaView>
       </PersistGate>
