@@ -1,14 +1,16 @@
-# React-native Test App
+# Engineer.ai test
 
-This is the test application for engineer ai to get the country and weather information, We have used own created react-native base repo to begin with this test application which by default support to ES6.
+Definition:
 
-Built with:
+Using country name get detail of country, also using captical of country get current weather for city
+
+Currently includes:
 
 - React Native
 - React Navigation
 - Redux
-- Redux-Saga
-- React Hooks and other.
+- Saga
+- React Hooks and more!
 
 ## Quick Start
 
