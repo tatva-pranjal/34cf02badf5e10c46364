@@ -1,16 +1,19 @@
 export const apiService = async (
   endpoint,
-  method = 'POST',
+  method = 'GET',
   params = '',
   headers = {'Content-Type': 'application/json'},
 ) => {
+  console.log('endpoint', endpoint)
   return fetch(endpoint, {
     method,
     headers,
     body: params,
   })
     .then((response) => {
+     
       if (response.status === 200) {
+        console.log(response);
         return response.json().then((data) => ({
           success: true,
           data,
@@ -18,6 +21,7 @@ export const apiService = async (
       }
     })
     .catch((error) => {
+      console.log(error)
       return {
         message: 'Something went wrong, please try again later',
         success: false,

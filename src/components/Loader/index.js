@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, Modal, ActivityIndicator} from 'react-native';
 import {useSelector} from 'react-redux';
+
 //import styles and define constants
-import styles from './styles';
-import COLORS from '../../constants/colors';
+import styles from './style';
 
 const Loader = (props) => {
   const {isVisible} = useSelector((state) => state.pageLoader);
@@ -16,11 +16,7 @@ const Loader = (props) => {
         console.log('close modal');
       }}>
       <View style={styles.modalBackground}>
-        <ActivityIndicator
-          animating={isVisible}
-          color={COLORS.YELLOW}
-          size={'large'}
-        />
+        <ActivityIndicator animating={isVisible} color="black" size={'large'} />
       </View>
     </Modal>
   );

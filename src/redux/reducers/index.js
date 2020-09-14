@@ -2,14 +2,13 @@
 import {combineReducers} from 'redux';
 
 // import reducer
-import demoReducer from './demoReducer';
+import reducer from './countryreducer';
 import pageLoaderReducer from './pageLoaderReducer';
 
 const appReducers = () =>
   combineReducers({
-    demo: demoReducer,
+    country: reducer,
     pageLoader: pageLoaderReducer,
-
   });
 
 export default appReducers;

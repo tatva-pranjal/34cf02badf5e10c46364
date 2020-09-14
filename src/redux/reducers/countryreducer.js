@@ -1,34 +1,28 @@
 import {act} from 'react-test-renderer';
 
 const initialState = {
-  authLoader: false,
-  isLoading: false,
-  isSignout: false,
   errMsg: '',
   data: null,
+  weatherDetail: '',
 };
 
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'SIGN_IN_SUCCESS':
+    case 'SET_COUNTRY_DETAIL':
       return {
         ...state,
         isSignout: false,
         data: action.payload.data,
         errMsg: '',
       };
-    case 'SIGN_IN_FAIL':
+    case 'SET_WEATHER_DETAIL':
       return {
         ...state,
         isSignout: false,
-        errMsg: action.payload.errMsg,
-        data: null,
+        weatherDetail: action.payload.weatherDetail,
+        errMsg: '',
       };
-    case 'SIGN_OUT':
-      return {
-        ...state,
-        isSignout: true,
-      };
+
     default:
       return state;
   }
